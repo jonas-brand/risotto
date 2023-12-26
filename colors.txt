@@ -1,0 +1,17 @@
+bg_dark:        #060A0F
+bg_medium:      #152030
+bg_light:       #233B5C
+fg_dark:        #A6A19D
+fg_light:       #D6CEC8
+red:            #AA3F3F
+red_light:      #BE4747
+green:          #878741
+green_light:    #A3A350
+yellow:         #D1A14D
+yellow_light:   #EECD66
+blue:           #4B7FB9
+blue_light:     #6AACDE
+magenta:        #B25F47
+magenta_light:  #CC8449
+cyan:           #87AFA6
+cyan_light:     #96C3BE
