@@ -15,6 +15,7 @@
             "./node_modules/@girs"
         ],
         "skipLibCheck": true,
-        "forceConsistentCasingInFileNames": true
+        "forceConsistentCasingInFileNames": true,
+        "outDir": "build"
     }
 }

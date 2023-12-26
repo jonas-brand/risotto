@@ -33,6 +33,7 @@ bindkey -v
 
 # ===========================================================================
 
+# set location of zcompdump file
 compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
 
 # source plugins
@@ -43,6 +44,9 @@ source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring
 # keybindings for substring search
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
+
+# aliases
+alias -g ags='ags -c "$XDG_CONFIG_HOME/ags/build/config.js"'
 
 # load the version control system
 autoload -Uz vcs_info
