@@ -1,0 +1,45 @@
+[colors.bright]
+black = "#1D314D"
+blue = "#6AACDE"
+cyan = "#87AFA6"
+green = "#A3A350"
+magenta = "#CC8449"
+red = "#BE4747"
+white = "#D6CEC8"
+yellow = "#EECD66"
+
+[colors.normal]
+black = "#0E1724"
+blue = "#4B7FB9"
+cyan = "#87AFA6"
+green = "#878741"
+magenta = "#B25F47"
+red = "#AA3F3F"
+white = "#233B5C"
+yellow = "#D1A14D"
+
+[colors.primary]
+background = "#060A0F"
+foreground = "#D6CEC8"
+
+[cursor]
+#shape = "Block"
+
+[font]
+size = 12.0
+
+[font.normal]
+family = "JetBrainsMono NF"
+style = "Regular"
+
+[scrolling]
+history = 10000
+
+[window]
+dynamic_title = true
+opacity = 1.0
+title = "Alacritty"
+
+[window.padding]
+x = 7
+y = 7
