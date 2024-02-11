@@ -1,0 +1,94 @@
+@import 'colors.css';
+
+* {
+    all: unset;
+    font-family: JetBrains Mono NF;
+    font-weight: bold;
+    font-size: 15px;
+    -gtk-icon-palette: error @red, warning @red, success @green;
+}
+
+label {
+    color: @fg_dark;
+    padding: 5px;
+}
+
+window.background {
+    background-color: @bg_dark;
+}
+
+.tile {
+    background-color: @bg_medium;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+button:active {
+    opacity: 0.6;
+}
+
+button.neutral .icon {
+    background-color: @bg_light;
+    color: @fg_dark;
+}
+
+.switch.neutral.active .icon {
+    background-color: @blue;
+    color: @bg_dark;
+}
+
+.icon {
+    padding: 5px;
+}
+
+label.neutral {
+    background-color: @bg_light;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+label.good {
+    color: @bg_dark;
+    background-color: @green;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+label.bad {
+    color: @bg_dark;
+    background-color: @red;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+label.in-process {
+    color: @bg_dark;
+    background-color: @blue;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+label.ok {
+    color: @bg_dark;
+    background-color: @yellow;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.icon.good {
+    color: @green;
+}
+
+.icon.bad {
+    color: @red;
+}
+
+.icon.in-process {
+    color: @blue;
+}
+
+.icon.ok {
+    color: @yellow;
+}
