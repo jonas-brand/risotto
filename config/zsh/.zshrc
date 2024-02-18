@@ -46,7 +46,7 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
 # aliases
-alias -g _ags='ags -c "$XDG_CONFIG_HOME/ags/build/main.js"'
+alias -g _ags='ags -c "$XDG_CONFIG_HOME/ags/build/_config/config.js"'
 
 # load the version control system
 autoload -Uz vcs_info
