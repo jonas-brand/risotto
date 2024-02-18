@@ -3,6 +3,7 @@ import Widget from "resource:///com/github/Aylur/ags/widget.js"
 import Options from "./../../_config/options.js"
 
 import Clock from "./clock.js"
+import ControlCenter from './control-center/control-center.js'
 
 const barSection = (vpack: 'start' | 'center' | 'end', children: Gtk.Widget[]) => Widget.Box({
     vertical: true,
@@ -16,6 +17,7 @@ const bar = (monitor: number) => Widget.CenterBox({
     margin: Options.spacing,
     start_widget: barSection('start', [
         Clock(),
+        ControlCenter()
     ])
 })
 

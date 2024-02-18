@@ -77,6 +77,10 @@ label.ok {
     padding-right: 20px;
 }
 
+.icon.neutral {
+    color: @bg_light;
+}
+
 .icon.good {
     color: @green;
 }
