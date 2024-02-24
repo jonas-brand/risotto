@@ -9,6 +9,8 @@
 }
 
 label {
+    transition-property: color, background-color;
+    transition-duration: 200ms;
     color: @fg_dark;
     padding: 5px;
 }
@@ -30,16 +32,22 @@ button:active {
 }
 
 button.neutral .icon {
+    transition-property: color, background-color;
+    transition-duration: 200ms;
     background-color: @bg_light;
     color: @fg_dark;
 }
 
-.switch.neutral.active .icon {
+.toggle-button.neutral.active .icon {
+    transition-property: color, background-color;
+    transition-duration: 200ms;
     background-color: @blue;
     color: @bg_dark;
 }
 
 .icon {
+    transition-property: color, background-color;
+    transition-duration: 200ms;
     padding: 5px;
 }
 
@@ -95,4 +103,26 @@ label.ok {
 
 .icon.ok {
     color: @yellow;
+}
+
+.switch {
+    padding: 5px;
+    min-width: 40px;
+    background-color: @bg_light;
+}
+
+.switch .handle {
+    transition-property: color, background-color;
+    transition-property: margin-right, margin-left;
+    transition-duration: 200ms;
+}
+
+.switch.on .handle {
+    margin-right: 20px;
+    background-color: @blue;
+}
+
+.switch.off .handle {
+    margin-left: 20px;
+    background-color: @bg_medium;
 }

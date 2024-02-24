@@ -1,14 +1,16 @@
+import MyWidget from '../../widgets/widgets.js'
 import Widget from "resource:///com/github/Aylur/ags/widget.js"
 import Variable from 'resource:///com/github/Aylur/ags/variable.js'
 import Network from 'resource:///com/github/Aylur/ags/service/network.js';
 import Options from '../../../_config/options.js'
+import {timeout} from 'resource:///com/github/Aylur/ags/utils.js'
 
 const wifiState = Variable('disconnected')
-Network.wifi.connect('changed', () => {
+Network.wifi.connect('changed', () => timeout(1, () => {
     wifiState.value = Network.wifi.internet
     if(!Network.wifi.enabled)
         wifiState.value = 'disabled'
-})
+}))
 
 const Icon = () => Widget.Icon({
     class_name: wifiState.bind().transform(state => {
@@ -34,6 +36,11 @@ const Content = () => Widget.Box({
     spacing: Options.spacing,
     children: [
         Widget.Label({
+            class_name: 'good',
+            visible: wifiState.bind().transform(state => state === 'connected'),
+            label: Network.wifi.bind('ssid').transform(ssid => ssid ? ssid.toString() : '')
+        }),
+        Widget.Label({
             class_name: wifiState.bind().transform(state => {
                 switch(state) {
                     case 'connected': return 'good'.toString()
@@ -42,17 +49,21 @@ const Content = () => Widget.Box({
                     default: return 'neutral'.toString()
                 }
             }),
+            hexpand: true,
             label: wifiState.bind().transform(state => state.toString())
         }),
-        Widget.Label({
-            class_name: 'neutral',
-            visible: wifiState.bind().transform(state => state === 'connected'),
-            label: Network.wifi.bind('ssid').transform(ssid => ssid ? ssid.toString() : '')
+        MyWidget.Switch({
+            inital_value: true,
+            on_deactivate: () => {Network.wifi.enabled = false; Network.wifi.emit('changed')},
+            on_activate: () => {Network.wifi.enabled = true; Network.wifi.emit('changed')},
         })
     ]
+
 })
 
 export default {
     Icon,
     Content
 }
+
+Network.wifi.emit('changed')

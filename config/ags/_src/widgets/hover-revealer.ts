@@ -14,7 +14,7 @@ export type HoverRevealerProps = {
 
 export function HoverRevealer(props: HoverRevealerProps) {
     let pinButton = Widget.Button({
-        class_names: ['switch', 'neutral', 'inactive'],
+        class_names: ['toggle-button', 'neutral', 'inactive'],
         hpack: 'end',
         vpack: 'start',
         margin_end: props.direction === 'left' ? Options.spacing : 0,
