@@ -112,6 +112,7 @@ label.ok {
 }
 
 .switch .handle {
+    min-width: 5px;
     transition-property: color, background-color;
     transition-property: margin-right, margin-left;
     transition-duration: 200ms;
@@ -125,4 +126,25 @@ label.ok {
 .switch.off .handle {
     margin-left: 20px;
     background-color: @bg_medium;
+}
+
+scale.neutral {
+    background-color: @bg_light;
+}
+
+scale.in-process {
+    background-color: @magenta;
+}
+
+scale highlight {
+    min-height: 23px;
+    margin: 5px;
+}
+
+scale.neutral highlight {
+    background-color: @bg_medium;
+}
+
+scale.in-process highlight {
+    background-color: @magenta_light;
 }

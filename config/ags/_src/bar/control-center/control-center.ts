@@ -4,28 +4,35 @@ import Options from '../../../_config/options.js'
 
 import Battery from './battery.js'
 import Wifi from './wifi.js'
+import Audio from './audio.js'
 
 const icons = () => Widget.Box({
     vertical: true,
     hpack: 'center',
-    vpack: 'center',
+    homogeneous: true,
+    vexpand: true,
+    margin_top: Options.spacing,
+    margin_bottom: Options.spacing,
     width_request: Options.bar.moduleWidth,
     children: [
         Battery.Icon(),
-        Wifi.Icon()
+        Wifi.Icon(),
+        Audio.Icon()
     ]
 })
 
 const content = () => Widget.Box({
     vertical: true,
-    vpack: 'center',
+    width_request: Options.control_center.width,
+    homogeneous: true,
     margin_top: Options.spacing,
     margin_bottom: Options.spacing,
     margin_right: Options.spacing,
     spacing: Options.spacing,
     children: [
         Battery.Content(),
-        Wifi.Content()
+        Wifi.Content(),
+        Audio.Content()
     ]
 })
 

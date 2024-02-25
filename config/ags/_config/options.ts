@@ -4,6 +4,9 @@ export default {
         moduleExpansionDuration: 200,
         moduleWidth: 40
     },
+    control_center: {
+        width: 400
+    },
     battery: {
         lowLimit: 13,
         icon: {
@@ -37,6 +40,16 @@ export default {
             disconnected: 'network-wireless-disconnected-symbolic',
             scanning: 'network-wireless-acquiring-symbolic',
             disabled: 'network-wireless-connected-symbolic'
+        }
+    },
+    audio: {
+        icon: {
+            not_muted: [
+                'audio-volume-low-symbolic',
+                'audio-volume-medium-symbolic',
+                'audio-volume-high-symbolic'
+            ],
+            muted: 'audio-volume-high-symbolic'
         }
     }
 }

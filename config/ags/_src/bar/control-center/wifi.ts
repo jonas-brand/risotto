@@ -3,14 +3,13 @@ import Widget from "resource:///com/github/Aylur/ags/widget.js"
 import Variable from 'resource:///com/github/Aylur/ags/variable.js'
 import Network from 'resource:///com/github/Aylur/ags/service/network.js';
 import Options from '../../../_config/options.js'
-import {timeout} from 'resource:///com/github/Aylur/ags/utils.js'
 
 const wifiState = Variable('disconnected')
-Network.wifi.connect('changed', () => timeout(1, () => {
+Network.wifi.connect('changed', () => {
     wifiState.value = Network.wifi.internet
     if(!Network.wifi.enabled)
         wifiState.value = 'disabled'
-}))
+})
 
 const Icon = () => Widget.Icon({
     class_name: wifiState.bind().transform(state => {
@@ -54,8 +53,8 @@ const Content = () => Widget.Box({
         }),
         MyWidget.Switch({
             inital_value: true,
-            on_deactivate: () => {Network.wifi.enabled = false; Network.wifi.emit('changed')},
-            on_activate: () => {Network.wifi.enabled = true; Network.wifi.emit('changed')},
+            on_deactivate: () => Network.wifi.enabled = false,
+            on_activate: () => Network.wifi.enabled = true,
         })
     ]
 
