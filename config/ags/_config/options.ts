@@ -4,8 +4,8 @@ export default {
         moduleExpansionDuration: 200,
         moduleWidth: 40
     },
-    control_center: {
-        width: 400
+    controlCenter: {
+        width: 500
     },
     battery: {
         lowLimit: 13,

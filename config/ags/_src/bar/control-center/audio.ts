@@ -23,7 +23,7 @@ const Content = () => Widget.Box({
         }),
         Widget.Slider({
             draw_value: false,
-            width_request: 100,
+            width_request: 150,
             min: 0,
             max: 1,
             on_change: ({value}) => {

@@ -11,8 +11,6 @@ const icons = () => Widget.Box({
     hpack: 'center',
     homogeneous: true,
     vexpand: true,
-    margin_top: Options.spacing,
-    margin_bottom: Options.spacing,
     width_request: Options.bar.moduleWidth,
     children: [
         Battery.Icon(),
@@ -23,7 +21,7 @@ const icons = () => Widget.Box({
 
 const content = () => Widget.Box({
     vertical: true,
-    width_request: Options.control_center.width,
+    width_request: Options.controlCenter.width - Options.bar.moduleWidth,
     homogeneous: true,
     margin_top: Options.spacing,
     margin_bottom: Options.spacing,
