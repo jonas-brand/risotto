@@ -64,5 +64,3 @@ export default {
     Icon,
     Content
 }
-
-Network.wifi.emit('changed')

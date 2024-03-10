@@ -1,4 +1,4 @@
-import Gtk from "node_modules/@girs/gtk-3.0/gtk-3.0"
+import Gtk from "gi://Gtk"
 import Widget from 'resource:///com/github/Aylur/ags/widget.js'
 import Options from './../../_config/options.js'
 
