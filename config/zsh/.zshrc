@@ -55,18 +55,7 @@ precmd() { vcs_info }
 # set the git prompt string
 zstyle ':vcs_info:git:*' formats '%b'
 
-retval()
-{
-    [ $1 != 0 ] && echo "%F{red} $1%f" && exit
-    echo "%F{green} $1%f" && exit
-}
-
 # Set the prompt
 setopt PROMPT_SUBST
-PROMPT=' $(retval $?)
-%K{blue} %F{black}󰣇 %n@%M%f %k%K{yellow}%F{blue}%f %F{black}  %~%f %k%K{cyan}%F{yellow}%f %F{black}󰘬 ${vcs_info_msg_0_}%f %k%K{magenta}%F{cyan}%f %F{black}󰁹 $(cat /sys/class/power_supply/BAT0/capacity)%% $(cat /sys/class/power_supply/BAT0/status)%f %k%K{15}%F{magenta}%f%F{0} 󰥔 %T %f%k%F{15}%f
-%F{yellow} 󱞪 %f'
-
-#display system information and arch logo
-macchina
+PROMPT='%1~ %F{yellow}%f '
 # ===========================================================================
