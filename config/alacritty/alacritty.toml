@@ -41,5 +41,5 @@ opacity = 1.0
 title = "Alacritty"
 
 [window.padding]
-x = 7
-y = 7
+x = 60
+y = 60
